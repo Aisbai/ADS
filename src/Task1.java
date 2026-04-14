@@ -12,13 +12,11 @@ public class Task1 {
         printExpression(n - 1);
         System.out.print(" + " + n + "^2");
     }
-
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
         printExpression(n);
         System.out.print(" = " + sumSquares(n));
-
         sc.close();
     }
 }

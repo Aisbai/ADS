@@ -14,14 +14,12 @@ public class Task9 {
     }
     public static void tryPositions(char[] arr, int index, int i) {
         if (i == arr.length) return;
-
         swap(arr, index, i);
         permute(arr, index + 1);
         swap(arr, index, i);
 
         tryPositions(arr, index, i + 1);
     }
-
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         String s = sc.nextLine();

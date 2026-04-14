@@ -8,7 +8,6 @@ public class Task4 {
         if (n == 0) return 1;
         return power(b, n) + sumPowers(b, n - 1);
     }
-
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int b = sc.nextInt();

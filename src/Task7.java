@@ -22,23 +22,18 @@ public class Task7 {
     }
     public static void spiral(int[][] a, int top, int bottom, int left, int right, int[] value) {
         if (top > bottom || left > right) return;
-
         fillTop(a, top, left, right, value);
         fillRight(a, top + 1, bottom, right, value);
-
         if (top < bottom) {
             fillBottom(a, bottom, right - 1, left, value);
         }
-
         if (left < right) {
             fillLeft(a, bottom - 1, top + 1, left, value);
         }
-
         spiral(a, top + 1, bottom - 1, left + 1, right - 1, value);
     }
     public static void printMatrix(int[][] a, int row, int col) {
         if (row == a.length) return;
-
         if (col == a[row].length) {
             System.out.println();
             printMatrix(a, row + 1, 0);
@@ -51,13 +46,10 @@ public class Task7 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
-
         int[][] a = new int[n][n];
         int[] value = {1};
-
         spiral(a, 0, n - 1, 0, n - 1, value);
         printMatrix(a, 0, 0);
-
         sc.close();
     }
 }
